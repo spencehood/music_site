@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>About Spence</title>
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="icon" href="imgs/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				$('#home_link').click(function (e) {
+				    e.preventDefault();                   // prevent default anchor behavior
+				    var goTo = this.getAttribute("href"); // store anchor href
+
+				    // do something while timeOut ticks ... 
+
+				    $('body').addClass('fade_down_out_anim');
+
+				    setTimeout(function(){
+				         window.location = goTo;
+				    }, 700);       
+				});
+				
+			}
+		</script>
+	</head>
+	<body class="about_body">
+		<nav class="non_home_nav">
+			<a href="#tunes"><div class="nav_item about_link">
+				<div class="bg_circle1 bg_circle"></div>
+				Tunes
+			</div></a>
+			<a href="home.html" id="home_link"><div class="nav_item main_logo"></div></a>
+			<a href="#contact"><div class="nav_item tunes_link">
+				<div class="bg_circle bg_circle2"></div>
+				Contact
+			</div></a>
+
+		</nav>
+
+<!-- 		<header>
+		Hey folks! I'm Spence and I &lt;3 music. Simple as that. If you wanna chat, shoot me a message at
+		<a href="mailto:spencehoodnow@gmail.com?Subject=New%20Music%20message%20from%20spencenow.com%20-%20" target="_top">
+			<span class="inline_link_email">
+				<div class="highlight"></div>
+				spencehoodnow@gmail.com
+			</span>
+		</a>
+		. If you wanna hear some cool tunes, check out the 
+		<a href="tunes.html">
+			<span class="inline_link_tunes">
+				<div class="highlight"></div>
+				Tunes
+			</span>
+		</a>
+		 page, or any of my stamps on the internet below. Some pretty sweet things are in the oven, so stay tuned.
+		 And if you wanna know what heaven tastes like, finish off a jar of Nutella, throw some almond milk in the empty jar, microwave that bad boy for a bit, stir, drink, swoon.  You're welcome.
+		 </header> -->
+
+		<header>
+			<div class="text">
+				<h1>The pleasure's all mine.</h1>
+				<p>Spence Hood is the name, tomorrow's music is my game. Born and raised in the amber sunshine of Denver, Colorado, I've made my way out here to Palo Alto to spread these good vibes up and down the Bay. My music is a well that I intend to give from till it's dry, so scroll down for a taste.</p>
+			</div>
+			<div class="portrait"></div>
+		 </header>
+
+		 <section id="tunes">
+			
+			<div class="vid">
+				<iframe src="https://www.youtube.com/embed/cfrdyISpVRc" frameborder="0" allowfullscreen></iframe>
+				<div class="bg_box"></div>
+			</div>
+			
+			<div class="vid">
+				<iframe src="https://www.youtube.com/embed/Qg-7NgxHnBA" frameborder="0" allowfullscreen></iframe>
+				<div class="bg_box box2"></div>
+			</div>
+
+			<div class="vid">
+				<iframe src="https://www.youtube.com/embed/tg7BprmHIws" frameborder="0" allowfullscreen></iframe>
+				<div class="bg_box box3"></div>
+			</div>
+
+			<div class="see_more">
+				Wanna see more?<br/>Check out my <br/><a href="https://www.youtube.com/channel/UCQ800V4ImdGgG25tgkrI0vA" target="blank">
+					<div class="youtube_link_highlight">YouTube channel</div>
+				</a>
+			</div>
+
+		</section>
+
+		<div class="bg_bar bar1"></div>
+		<div class="bg_bar bar2"></div>
+
+		<section class="clips">
+
+			<div class="audio_tile">
+				<strong>Something Sweet</strong> - music and lyrics by David Bashford, solo by Spence
+				<audio controls="controls">
+					<source src="audio/SomethingSweet.wav" type="audio/wav" />
+					Shoot, your browser doesn't support this audio player - check out my SOUNDCLOUD instead
+				</audio>
+			</div>
+			
+			<div class="audio_tile tile2">
+				<strong>December, 1963</strong> - CU Buffoons A Cappella cover <span class="lighter_text">(The Four Seasons)</span>, solo by Spence
+				<audio controls="controls">
+					<source src="audio/December1963.wav" type="audio/wav" />
+					Shoot, your browser doesn't support this audio player - check out my SOUNDCLOUD instead
+				</audio>
+			</div>
+
+		</section>
+
+		<section id="contact">
+			
+			<div class="contact_bg_circle"></div>
+			<div class="contact_bg_circle bg_circle2"></div>
+
+			<h1>Representatives are standing by!</h1>
+			<p>And by "representatives", I mean little old me, eagerly refreshing my inbox every five seconds.  I would be delighted to answer any questions you have, send you some more tunes, talk about how the heck the word "gif" is pronounced; whatever you want.  I am also 
+			<span class="hire_highlight">happily available for hire</span> at private and public events. Drop me a line at
+			<a href="mailto:spencehoodnow@gmail.com?Subject=New%20Music%20message%20from%20spencenow.com%20-%20" target="_top" class="inline_link_email">
+				spencehoodnow@gmail.com
+			</a>, and check out some of my stamps on the internet below.
+			</p>
+		
+			<p class="mobile_text">Drop me a line at
+			<a href="mailto:spencehoodnow@gmail.com?Subject=New%20Music%20message%20from%20spencenow.com%20-%20" target="_top" class="inline_link_email">
+				spencehoodnow@gmail.com
+			</a>, and check out some of my stamps on the internet below. I am happily available for hire at private and public events. 
+			</p>
+
+			<div class="social">
+				<a href="https://www.facebook.com/spencehood/" target="blank"><div class="social_icon fb"></div></a>
+				<a href="https://www.youtube.com/channel/UCQ800V4ImdGgG25tgkrI0vA" target="blank"><div class="social_icon youtube"></div></a>
+				<a href="https://soundcloud.com/user-975691885" target="blank"><div class="social_icon soundcloud"></div></a>
+			</div>
+	
+		</section>
+
+<!-- 		<footer>
+			Spence Hood - 2017
+		</footer> -->
+
+<!-- 
+		<section class="dialogue">
+			
+			<div class="friend_talk">"Dude you should make a website!"</div>
+			<div class="me_talk">"Mmm already have one lol spencehood.com"</div>
+			<div class="friend_talk">"Ye but isn't that like for programming and paintings and stuff? You should make one for your music"</div>
+			<div class="friend_talk">"Like it'd be cool to see all your best stuff in one place, instead of having to hunt around on YouTube and Spotify and stuff"</div>
+			<div class="me_talk">"Actually that's a cool idea... and then I can put this convo on the site!</div>
+			<div class="friend_talk">"Wait, so we're on the site rn? Hi Spence fans! This guy's radical, check him out!"</div>
+
+		</section> -->
+
+	</body>
+</html>

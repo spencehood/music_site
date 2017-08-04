@@ -1,0 +1,2089 @@
+@import url('https://fonts.googleapis.com/css?family=Ovo|Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ovo|Quattrocento+Sans');
+.fade_in_anim {
+  -webkit-animation: fade_in 0.6s linear;
+  -moz-animation: fade_in 0.6s linear;
+  animation: fade_in 0.6s linear;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-moz-keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fade_in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.fade_up_out_anim {
+  -webkit-animation: fade_up_out 0.6s ease-in;
+  -moz-animation: fade_up_out 0.6s ease-in;
+  animation: fade_up_out 0.6s ease-in;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+@-webkit-keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+@keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+@-moz-keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+@-webkit-keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+@keyframes fade_up_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px;
+    position: absolute;
+  }
+}
+.now_playing {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #777;
+  border: 2px solid #e6e6e6;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  opacity: 0;
+  transition: 0.35s linear;
+}
+.now_playing em {
+  color: #333;
+}
+.entry_screen {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.entry_screen_anim {
+  -webkit-animation: entry_screen_fade 0.8s ease;
+  -moz-animation: entry_screen_fade 0.8s ease;
+  animation: entry_screen_fade 0.8s ease;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes entry_screen_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.entry_logo {
+  height: 400px;
+  width: 600px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.logo_yellow {
+  background: url('../imgs/Logomark_yellow.png') no-repeat;
+  background-size: contain;
+  margin: 220px 0 0 -300px;
+}
+.logo_aqua {
+  background: url('../imgs/Logomark_aqua.png') no-repeat;
+  background-size: contain;
+  margin: 140px 0 0 -300px;
+}
+.logo_pink {
+  background: url('../imgs/Logomark_pink.png') no-repeat;
+  background-size: contain;
+  margin: -40px 0 0 -300px;
+}
+.yellow_move_anim {
+  -webkit-animation: yellow_move 2.2s ease;
+  -moz-animation: yellow_move 2.2s ease;
+  animation: yellow_move 2.2s ease;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-moz-keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes yellow_move {
+  0% {
+    opacity: 0;
+    left: 20%;
+    margin: 220px 0 0 -300px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+.aqua_move_anim {
+  -webkit-animation: aqua_move 2.6s ease;
+  -moz-animation: aqua_move 2.6s ease;
+  animation: aqua_move 2.6s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+@-moz-keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-moz-keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes aqua_move {
+  0% {
+    opacity: 0;
+    left: 80%;
+    margin: 140px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+.pink_move_anim {
+  -webkit-animation: pink_move 1.7s ease;
+  -moz-animation: pink_move 1.7s ease;
+  animation: pink_move 1.7s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+}
+@-moz-keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-moz-keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@-webkit-keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+@keyframes pink_move {
+  0% {
+    opacity: 0;
+    left: 40%;
+    margin: -40px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+  }
+  70% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+  }
+  100% {
+    opacity: 0.6;
+    left: 50%;
+    margin: 60px 0 0 -300px;
+    height: 400px;
+    width: 600px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+  }
+}
+.content_contain {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.home_logo {
+  opacity: 0.08;
+  height: 400px;
+  width: 600px;
+  background: url('../imgs/Logomark.png') no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+.play_btn {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -100px;
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+.play_btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.play_btn_orbit_circle,
+.circle1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff24a;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -120px 0 0 -100px;
+  opacity: 0;
+  transition: 0.25s linear;
+  -webkit-animation: orbit1 3.6s linear infinite;
+  -moz-animation: orbit1 3.6s linear infinite;
+  animation: orbit1 3.6s linear infinite;
+}
+@-moz-keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-moz-keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit1 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+.circle2 {
+  background: #43f1c2;
+  -webkit-animation: orbit2 5.1s linear infinite;
+  -moz-animation: orbit2 5.1s linear infinite;
+  animation: orbit2 5.1s linear infinite;
+  transition: 0.8s linear;
+}
+@-moz-keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-moz-keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit2 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+.circle3 {
+  background: #ff5bea;
+  -webkit-animation: orbit3 4s linear infinite;
+  -moz-animation: orbit3 4s linear infinite;
+  animation: orbit3 4s linear infinite;
+  transition: 0.55s linear;
+}
+@-moz-keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-moz-keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+@keyframes orbit3 {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+  }
+}
+.circle4 {
+  background: rgba(0, 0, 0, 0);
+  border: 14px solid #fff;
+  animation: none;
+  margin: -134px 0 0 -114px;
+}
+.play_triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 50px 85px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 50px;
+  left: 70px;
+  transition: 0.15s linear;
+  opacity: 1;
+}
+.pause_bars {
+  width: 40px;
+  height: 85px;
+  border-left: 25px solid #fff;
+  border-right: 25px solid #fff;
+  position: absolute;
+  top: 60px;
+  left: 55px;
+  transition: 0.15s linear;
+  opacity: 0;
+}
+.main_audio_player {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 200px;
+  margin: 0;
+}
+.home_nav {
+  opacity: 0;
+  position: fixed;
+  width: 500px;
+  left: 50%;
+  bottom: 90px;
+  margin-left: -250px;
+  text-align: center;
+}
+.home_nav .nav_item {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0 45px;
+  color: #333;
+  transition: 0.12s linear;
+}
+.home_nav .nav_item.about_link:hover {
+  color: #43f1c2;
+}
+.home_nav .nav_item.tunes_link:hover {
+  color: #ff5bea;
+}
+.welcome {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  font-size: 40px;
+  /* text-transform: uppercase; */
+  letter-spacing: 3px;
+  font-family: 'Ovo', sans-serif;
+  font-weight: 600;
+  margin-left: -98px;
+  transition: 0.17s linear;
+  opacity: 0;
+}
+.welcome .caret {
+  font-size: 18px;
+  /* line-height: 0px; */
+  /* background: pink; */
+  display: inline-block;
+  /* padding-bottom: 10px; */
+  margin-top: 9px;
+  vertical-align: top;
+}
+.welcome .scroll_indicator {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  margin: -10px auto 0 auto;
+}
+.welcome .scroll_indicator .bar {
+  width: 40px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  transform: rotate(40deg);
+  transition: 0.09s linear;
+  margin-top: 25px;
+}
+.welcome .scroll_indicator .bar2 {
+  transform: rotate(-40deg);
+  right: 0;
+}
+.welcome:hover {
+  text-shadow: -20px -27px 0px #ff5bea, 20px 29px 0px #43f1c2;
+}
+@media (max-width: 500px) {
+  .entry_logo {
+    height: 200px;
+    width: 300px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .logo_yellow {
+    background: url('../imgs/Logomark_yellow.png') no-repeat;
+    background-size: contain;
+    margin: 360px 0 0 -100px;
+  }
+  .logo_aqua {
+    background: url('../imgs/Logomark_aqua.png') no-repeat;
+    background-size: contain;
+    margin: 70px 0 0 0;
+  }
+  .logo_pink {
+    background: url('../imgs/Logomark_pink.png') no-repeat;
+    background-size: contain;
+    margin: 280px 0 0 280px;
+  }
+  .yellow_move_anim {
+    -webkit-animation: yellow_move 2.2s ease;
+    -moz-animation: yellow_move 2.2s ease;
+    animation: yellow_move 2.2s ease;
+    animation-fill-mode: forwards;
+  }
+  @-moz-keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-moz-keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes yellow_move {
+    0% {
+      opacity: 0;
+      margin: 360px 0 0 -100px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark_yellow.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  .aqua_move_anim {
+    -webkit-animation: aqua_move 2.6s ease;
+    -moz-animation: aqua_move 2.6s ease;
+    animation: aqua_move 2.6s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  @-moz-keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-moz-keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes aqua_move {
+    0% {
+      opacity: 0;
+      margin: 70px 0 0 0;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_aqua.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  .pink_move_anim {
+    -webkit-animation: pink_move 1.9s ease;
+    -moz-animation: pink_move 1.9s ease;
+    animation: pink_move 1.9s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+  }
+  @-moz-keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-moz-keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @-webkit-keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  @keyframes pink_move {
+    0% {
+      opacity: 0;
+      margin: 280px 0 0 280px;
+      height: 200px;
+      width: 300px;
+    }
+    70% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark_pink.png') no-repeat;
+      background-size: contain;
+    }
+    100% {
+      opacity: 0.6;
+      margin: 220px 0 0 35px;
+      height: 200px;
+      width: 300px;
+      background: url('../imgs/Logomark.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  .content_contain {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .home_logo {
+    opacity: 0.08;
+    height: 200px;
+    width: 300px;
+    background: url('../imgs/Logomark.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+}
+.fade_down_out_anim {
+  -webkit-animation: fade_down_out 0.6s ease-in;
+  -moz-animation: fade_down_out 0.6s ease-in;
+  animation: fade_down_out 0.6s ease-in;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+@-webkit-keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+@keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+@-moz-keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+@-webkit-keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+@keyframes fade_down_out {
+  from {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+    position: relative;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    top: 50px;
+    position: absolute;
+  }
+}
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quattrocento Sans', sans-serif;
+  color: #333;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.about_body {
+  overflow-x: hidden;
+}
+.non_home_nav {
+  width: 100%;
+  text-align: center;
+}
+.non_home_nav a {
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+}
+.non_home_nav a .nav_item {
+  font-size: 26px;
+  line-height: 50px;
+  letter-spacing: 4px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: 'Quattrocento Sans';
+}
+.non_home_nav a:first-of-type {
+  margin: 20px 30px 20px 20px;
+}
+.non_home_nav a:last-of-type {
+  margin: 20px 40px 0 -5px;
+}
+.non_home_nav a:hover .bg_circle1 {
+  opacity: 0.35;
+  width: 125px;
+  height: 18px;
+  top: 14px;
+  left: -17px;
+  transform: rotate(10deg);
+}
+.non_home_nav a:hover .bg_circle2 {
+  width: 60px;
+  height: 60px;
+  top: -4px;
+  left: 40px;
+  transform: rotate(18deg);
+  opacity: 0.5;
+}
+.non_home_nav .main_logo {
+  background: url('../imgs/Logomark_small.png') no-repeat center;
+  background-size: contain;
+  height: 120px;
+  width: 200px;
+  margin: 20px 0 40px;
+  transition: 0.12s linear;
+}
+.non_home_nav .bg_circle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ff5bea;
+  border-radius: 50%;
+  top: -4px;
+  left: 16px;
+  transition: 0.3s ease;
+  opacity: 0.15;
+}
+.non_home_nav .bg_circle2 {
+  width: 125px;
+  height: 18px;
+  background: #43f1c2;
+  top: 14px;
+  left: 8px;
+  transform: rotate(-10deg);
+  opacity: 0.3;
+}
+header {
+  width: 85%;
+  height: 340px;
+  margin: 20px auto;
+  text-align: center;
+}
+header .text {
+  width: 46%;
+  display: inline-block;
+  vertical-align: top;
+}
+header .text h1 {
+  font-size: 40px;
+  font-family: 'Ovo', serif;
+  text-align: left;
+}
+header .text p {
+  font-size: 23px;
+  line-height: 28px;
+  margin-top: 10px;
+  text-align: justify;
+}
+header .portrait {
+  width: 300px;
+  height: 100%;
+  margin-left: 40px;
+  background: url('../imgs/portrait.png') no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+.audio_tile {
+  background: #fff;
+  padding: 18px 12px 12px 24px;
+  box-shadow: 10px 19px 0 rgba(255, 242, 74, 0.5);
+  width: 420px;
+  font-size: 24px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin: 25px 0 25px 100px;
+}
+.audio_tile.tile2 {
+  box-shadow: -21px -7px 0 rgba(67, 241, 194, 0.5);
+  background: #fff;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  float: right;
+  margin: 65px 100px 25px 0;
+}
+#tunes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+.vid {
+  margin: 50px;
+  width: 380px;
+  height: 260px;
+  position: relative;
+}
+.vid iframe {
+  width: 100%;
+  height: 100%;
+}
+.vid .bg_box {
+  border: 2px solid #43f1c2;
+  width: 108%;
+  height: 117%;
+  transform: rotate(6deg);
+  top: -9%;
+  position: absolute;
+  left: -4%;
+  opacity: 0.4;
+  z-index: -2;
+}
+.vid .bg_box.box2 {
+  border: 3px solid #fff24a;
+  transform: rotate(-4deg);
+  opacity: 0.8;
+  height: 116%;
+  top: -10%;
+}
+.vid .bg_box.box3 {
+  transform: rotate(2deg);
+  border: 2px solid #ff5bea;
+  opacity: 0.5;
+  width: 114%;
+  left: -8%;
+  height: 110%;
+  top: -6%;
+}
+.youtube_link_highlight {
+  border-bottom: 2px solid #43f1c2;
+  height: 32px;
+  width: 75%;
+  margin: 0 auto;
+  transition: 0.15s linear;
+}
+.youtube_link_highlight:hover {
+  background: rgba(67, 241, 194, 0.6);
+}
+.bg_bar {
+  width: 108%;
+  height: 8px;
+  background: #fff24a;
+  transform: rotate(1.3deg);
+  opacity: 0.6;
+  margin-left: -4%;
+}
+.bg_bar.bar2 {
+  height: 12px;
+  background: none;
+  border: 2px solid #43f1c2;
+  transform: rotate(-3deg);
+}
+.audio_clips,
+.clips {
+  text-align: center;
+  padding: 40px 0;
+}
+.audio_clips::after,
+.clips::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+audio {
+  width: 360px;
+  display: block;
+  border: 2px solid #e3e3e3;
+  margin: 25px 20px 25px 30px;
+}
+.see_more {
+  width: 260px;
+  font-size: 24px;
+  text-align: center;
+  margin-left: 20px;
+  line-height: 34px;
+}
+.see_more a {
+  text-decoration: none;
+  font-weight: 600;
+}
+.lighter_text {
+  opacity: 0.5;
+}
+.inline_link_email {
+  font-weight: 600;
+}
+.inline_link_email .highlight {
+  position: absolute;
+  width: 274px;
+  z-index: -1;
+  top: 26px;
+  left: -3px;
+  height: 2px;
+  background: #fff24a;
+  transition: 0.15s ease;
+}
+.inline_link_email:hover > .highlight {
+  top: -2px;
+  height: 30px;
+  opacity: 0.9;
+}
+.inline_link_tunes {
+  position: relative;
+  background: rgba(255, 91, 234, 0.6);
+}
+.inline_link_tunes .highlight {
+  position: absolute;
+  width: 60px;
+  z-index: -1;
+  top: 26px;
+  left: -3px;
+  height: 2px;
+  background: #ff5bea;
+  transition: 0.15s ease;
+}
+.inline_link_tunes:hover > .highlight {
+  top: -2px;
+  height: 30px;
+  opacity: 0.6;
+}
+#contact {
+  padding: 40px 100px;
+  position: relative;
+  overflow: hidden;
+}
+#contact h1 {
+  font-family: 'Ovo', serif;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#contact p {
+  font-size: 20px;
+  line-height: 28px;
+  margin-top: 10px;
+  text-align: justify;
+}
+#contact p a {
+  text-decoration: none;
+}
+#contact p.mobile_text {
+  display: none;
+}
+#contact .contact_bg_circle {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: #ff5bea;
+  opacity: 0.05;
+  z-index: -1;
+  left: -120px;
+  top: 0;
+  position: absolute;
+}
+#contact .bg_circle2 {
+  border: 4px solid #fff24a;
+  background: none;
+  top: 100px;
+  opacity: 0.5;
+  right: -130px;
+  top: 80px;
+  left: auto;
+  width: 800px;
+  height: 300px;
+  transform: rotate(-20deg);
+}
+.social {
+  margin-top: 50px;
+  text-align: center;
+}
+.social_icon {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  margin: 0 40px;
+  opacity: 0.75;
+  transition: 0.15s linear;
+}
+.social_icon:hover {
+  opacity: 1;
+}
+.fb {
+  background: url(../imgs/facebook.png) no-repeat center;
+  background-size: contain;
+}
+.youtube {
+  background: url(../imgs/youtube.png) no-repeat center;
+  background-size: contain;
+}
+.soundcloud {
+  background: url(../imgs/soundcloud.png) no-repeat center;
+  background-size: contain;
+}
+footer {
+  font-size: 10px;
+  text-align: center;
+}
+@media (min-width: 800px) and (max-width: 1080px) {
+  header .text h1 {
+    font-size: 29px;
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  #contact p {
+    text-align: left;
+  }
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .non_home_nav a .nav_item {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .non_home_nav a:first-of-type {
+    margin: 28px 15px 0 0;
+  }
+  .non_home_nav a:last-of-type {
+    margin: 28px 0 0 -5px;
+  }
+  .non_home_nav a:hover .bg_circle1 {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 6px;
+    transform: rotate(18deg);
+    opacity: 0.15;
+  }
+  .non_home_nav a:hover .bg_circle2 {
+    width: 85px;
+    height: 14px;
+    top: 16px;
+    left: 3px;
+    transform: rotate(-10deg);
+    opacity: 0.3;
+  }
+  .non_home_nav .main_logo {
+    width: 100px;
+    margin: 0;
+  }
+  .non_home_nav .bg_circle {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 6px;
+  }
+  .non_home_nav .bg_circle2 {
+    width: 85px;
+    height: 14px;
+    top: 16px;
+    left: 3px;
+  }
+  header {
+    height: auto;
+  }
+  header .text {
+    width: 90%;
+  }
+  header .text h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header .portrait {
+    width: 220px;
+    height: 240px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    margin: 30px auto;
+    opacity: 0.25;
+  }
+  .vid {
+    margin: 40px 30px;
+    height: 160px;
+  }
+  .see_more {
+    margin: 20px auto;
+  }
+  .audio_tile {
+    font-size: 18px;
+    width: 80%;
+    margin: 20px 0;
+    box-shadow: none;
+  }
+  .audio_tile audio {
+    width: 230px;
+    margin: 15px auto;
+  }
+  .audio_tile.tile2 {
+    margin: 10px 0 40px;
+    float: none;
+    box-shadow: none;
+  }
+  .clips {
+    padding: 40px 0 0;
+  }
+  #contact {
+    padding: 30px;
+    width: auto;
+  }
+  #contact h1 {
+    font-size: 36px;
+  }
+  #contact p {
+    font-size: 21px;
+    display: none;
+  }
+  #contact p.mobile_text {
+    display: block;
+    text-align: justify;
+    line-height: 30px;
+    margin-top: -5px;
+  }
+  .social {
+    margin-top: 30px;
+  }
+  .social_icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+  }
+}

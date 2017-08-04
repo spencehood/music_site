@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ovo|Quattrocento+Sans');
+
+
+@off_black: #333;
+@yellow: #fff24a;
+@aqua: #43f1c2;
+@pink: #ff5bea;
+
+.absolute_pos(@top, @right, @bottom, @left) {
+	position: absolute;
+	top: @top;
+	right: @right;
+	bottom: @bottom;
+	left: @left;
+}
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.fade_in_anim {
+	.keyframes(fade_in; {
+		from { opacity: 0; visibility: hidden; }
+    	to   { opacity: 1; visibility: visible; }
+    });
+    .animation(fade_in 0.6s linear);
+    animation-fill-mode: forwards;
+}
+.fade_up_out_anim {
+	.keyframes(fade_up_out; {
+		from { opacity: 1; visibility: visible; top: 0; position: relative; }
+    	to   { opacity: 0; visibility: hidden; top: -50px; position: absolute; }
+    });
+    .animation(fade_up_out 0.6s ease-in);
+    animation-fill-mode: forwards;
+}
+
+.now_playing {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	color: #777;
+	border: 2px solid #e6e6e6;
+	padding: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
+	opacity: 0;
+	transition: 0.35s linear;
+	em {
+		color: @off_black;
+	}
+}
+.entry_screen	{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+.entry_screen_anim {
+	.keyframes(entry_screen_fade; {
+		from { opacity: 1; }
+		to { opacity: 0; visibility: hidden; }
+    });
+	.animation(entry_screen_fade 0.8s ease);
+    animation-fill-mode: forwards;
+}
+.entry_logo {
+    height: 400px;
+    width: 600px;
+    // position: absolute;
+    // left: 50%;
+    // margin: 60px 0 0 -300px;
+    opacity: 0;
+    .absolute_pos(0, 0, 0, 0);
+	margin: auto;
+}
+.logo_yellow {
+	background: url('../imgs/Logomark_yellow.png') no-repeat;
+	background-size: contain;
+	// left: 20%;
+	margin: 220px 0 0 -300px;
+}
+.logo_aqua {
+	background: url('../imgs/Logomark_aqua.png') no-repeat;
+	background-size: contain;
+	// left: 80%;
+    margin: 140px 0 0 -300px;
+}
+.logo_pink {
+	background: url('../imgs/Logomark_pink.png') no-repeat;
+	background-size: contain;
+	// left: 40%;
+    margin: -40px 0 0 -300px;
+}
+.yellow_move_anim {
+	.keyframes(yellow_move; {
+		0% { 	opacity: 0;
+				left: 20%;
+				margin: 220px 0 0 -300px;
+			}
+    	70% { 	opacity: 0.6;
+    			left: 50%;
+    			margin: 60px 0 0 -300px;
+    			// margin: auto;
+    			background: url('../imgs/Logomark_yellow.png') no-repeat; background-size: contain;
+    		}
+		100% { 	opacity: 0.6;
+				left: 50%;
+				margin: 60px 0 0 -300px;
+				// margin: auto;
+				background: url('../imgs/Logomark.png') no-repeat; background-size: contain;
+			}
+    });
+    .animation(yellow_move 2.2s ease);
+    animation-fill-mode: forwards;
+}
+.aqua_move_anim {
+	.keyframes(aqua_move; {
+		0% { opacity: 0; left: 80%; margin: 140px 0 0 -300px; height: 400px; width: 600px; }
+    	70% { opacity: 0.6; left: 50%; margin: 60px 0 0 -300px; height: 400px; width: 600px;
+    		background: url('../imgs/Logomark_aqua.png') no-repeat; background-size: contain; }
+		100% { opacity: 0.6; left: 50%; margin: 60px 0 0 -300px; height: 400px; width: 600px;
+			background: url('../imgs/Logomark.png') no-repeat; background-size: contain; }
+    });
+    .animation(aqua_move 2.6s ease);
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.pink_move_anim {
+	.keyframes(pink_move; {
+		0% { opacity: 0; left: 40%; margin: -40px 0 0 -300px; height: 400px; width: 600px; }
+    	70% { opacity: 0.6; left: 50%; margin: 60px 0 0 -300px; height: 400px; width: 600px;
+    		background: url('../imgs/Logomark_pink.png') no-repeat; background-size: contain; }
+		100% { opacity: 0.6; left: 50%; margin: 60px 0 0 -300px; height: 400px; width: 600px;
+			background: url('../imgs/Logomark.png') no-repeat; background-size: contain; }
+    });
+    .animation(pink_move 1.7s ease);
+    animation-fill-mode: forwards;
+    -webkit-animation-delay: 0.45s;
+    animation-delay: 0.45s;
+}
+
+
+
+
+
+.content_contain {
+	width: 600px;
+	height: 400px;
+	.absolute_pos(0, 0, 0, 0);
+	margin: auto;
+}
+
+.home_logo {
+	opacity: 0.08;
+	height: 400px;
+	width: 600px;
+	background: url('../imgs/Logomark.png') no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+.play_btn {
+	width: 200px;
+    height: 200px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -120px 0 0 -100px;
+    cursor: pointer;
+    transition: 0.15s linear;
+    &:hover {
+    	background: rgba(0, 0, 0, 0.8);
+    }
+  //   .keyframes(color_fade; {
+		// 0% { background: rgba(246, 36, 89, 0.3); }
+		// 15% { background: rgba(103, 65, 114, 0.4); }
+		// 30% { background: rgba(78, 205, 196, 0.3); }
+		// 45% { background: rgba(135, 211, 124, 0.5); }
+		// 60% { background: rgba(253, 227, 167, 0.6); }
+		// 75% { background: rgba(248, 148, 6, 0.3); }
+		// 90% { background: rgba(52, 73, 94, 0.7); }
+		// 100% { background: rgba(246, 36, 89, 0.3); }
+  //   });
+  //   .animation(color_fade 10s linear infinite);
+}
+.play_btn_orbit_circle, .circle1 {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: @yellow;
+	position: absolute;
+	left: 50%;
+    top: 50%;
+    margin: -120px 0 0 -100px;
+    opacity: 0;
+    transition: 0.25s linear;
+    .keyframes(orbit1; {
+		from { -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    	to   { -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    });
+    .animation(orbit1 3.6s linear infinite);
+}
+.circle2 {
+	background: @aqua;
+	.keyframes(orbit2; {
+		from { -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    	to   { -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    });
+    .animation(orbit2 5.1s linear infinite);
+    transition: 0.8s linear;
+    // -webkit-animation-delay: 1s;
+    // animation-delay: 1s;
+}
+.circle3 {
+	background: @pink;
+	.keyframes(orbit3; {
+		from { -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    	to   { -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+    });
+    .animation(orbit3 4s linear infinite);
+    transition: 0.55s linear;
+    // -webkit-animation-delay: 0.5s;
+    // animation-delay: 0.5s;
+}
+.circle4 {
+	background: rgba(0,0,0,0);
+	border: 14px solid #fff;
+	animation: none;
+	margin: -134px 0 0 -114px;
+}
+
+.play_triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 50px 0 50px 85px;
+	border-color: transparent transparent transparent #fff;
+	position: absolute;
+	top: 50px;
+	left: 70px;
+	transition: 0.15s linear;
+	opacity: 1;
+}
+.pause_bars {
+	width: 40px;
+    height: 85px;
+    border-left: 25px solid #fff;
+    border-right: 25px solid #fff;
+    position: absolute;
+    top: 60px;
+    left: 55px;
+    transition: 0.15s linear;
+    opacity: 0;
+}
+.main_audio_player {
+	display: none;
+	position: absolute;
+    top: 15px;
+    left: 200px;
+    margin: 0;
+}
+
+.home_nav {
+	opacity: 0;
+    position: fixed;
+    width: 500px;
+    left: 50%;
+    bottom: 90px;
+    margin-left: -250px;
+    text-align: center;
+	.nav_item {
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: 'Quattrocento Sans', sans-serif;
+		font-weight: 800;
+		font-size: 30px;
+		margin: 0 45px;
+		color: #333;
+		transition: 0.12s linear;
+		&.about_link:hover {
+			color: @aqua;
+		}
+		&.tunes_link:hover {
+			color: @pink;
+		}
+	}
+}
+.welcome {
+	// background: lightblue;
+    // width: 240px;
+    // width: 70px;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    font-size: 40px;
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    font-family: 'Ovo', sans-serif;
+    font-weight: 600;
+    margin-left: -98px;
+    transition: 0.17s linear;
+    opacity: 0;
+    .caret {
+    	font-size: 18px;
+	    /* line-height: 0px; */
+	    /* background: pink; */
+	    display: inline-block;
+	    /* padding-bottom: 10px; */
+	    margin-top: 9px;
+	    vertical-align: top;
+    }
+	.scroll_indicator {
+		// background: pink;
+	    position: relative;
+	    // bottom: -10px;
+	    width: 70px;
+	    height: 50px;
+	    margin: -10px auto 0 auto;
+		.bar {
+			width: 40px;
+	    	height: 3px;
+	    	background: @off_black;
+	   		position: absolute;
+	    	transform: rotate(40deg);
+	    	transition: 0.09s linear;
+	    	margin-top: 25px;
+		}
+		.bar2 {
+			transform: rotate(-40deg);
+			right: 0;
+		}
+		
+	}
+
+	// &:hover > .scroll_indicator > .bar1 {
+	// 	transform: rotate(50deg);
+	//     width: 35px;
+	//     margin-left: 7px;
+	//     margin-top: 32px;
+	//     background: @pink;
+	// }
+	// &:hover > .scroll_indicator > .bar2 {
+	// 	transform: rotate(-50deg);
+	// 		width: 35px;
+	// 	margin-right: 7px;
+	// 	margin-top: 32px;
+	// 	background: @aqua;
+	// }
+
+	&:hover {
+		text-shadow: -20px -27px 0px @pink, 20px 29px 0px @aqua;
+	}
+
+}
+
+
+
+
+
+// .text_color_fade_anim {
+// 	.keyframes(text_color_fade; {
+// 		0% { color: #43f1c2; }
+//     	33%   { color: #fff24a; }
+//     	66%  { color: #ff5bea; }
+// 		100% { color: #43f1c2; }
+//     });
+//     .animation(text_color_fade 3s linear infinite);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 500px) {
+
+	.entry_logo {
+	    height: 200px;
+	    width: 300px;
+	    // position: absolute;
+	    // left: 50%;
+	    // margin: 60px 0 0 -300px;
+	    opacity: 0;
+	    .absolute_pos(0, 0, 0, 0);
+		margin: auto;
+	}
+	.logo_yellow {
+		background: url('../imgs/Logomark_yellow.png') no-repeat;
+		background-size: contain;
+		// left: 20%;
+		margin: 360px 0 0 -100px;
+	}
+	.logo_aqua {
+		background: url('../imgs/Logomark_aqua.png') no-repeat;
+		background-size: contain;
+		// left: 80%;
+	    margin: 70px 0 0 0;
+	}
+	.logo_pink {
+		background: url('../imgs/Logomark_pink.png') no-repeat;
+		background-size: contain;
+		// left: 40%;
+	    margin: 280px 0 0 280px;
+	}
+	.yellow_move_anim {
+		.keyframes(yellow_move; {
+			0% { 	opacity: 0;
+					// left: 20%;
+					margin: 360px 0 0 -100px;
+				}
+	    	70% { 	opacity: 0.6;
+	    			// left: 50%;
+	    			margin: 220px 0 0 35px;
+	    			// margin: auto;
+	    			background: url('../imgs/Logomark_yellow.png') no-repeat; background-size: contain;
+	    		}
+			100% { 	opacity: 0.6;
+					// left: 50%;
+					margin: 220px 0 0 35px;
+					// margin: auto;
+					background: url('../imgs/Logomark.png') no-repeat; background-size: contain;
+				}
+	    });
+	    .animation(yellow_move 2.2s ease);
+	    animation-fill-mode: forwards;
+	}
+	.aqua_move_anim {
+		.keyframes(aqua_move; {
+			0% { opacity: 0; margin: 70px 0 0 0; height: 200px; width: 300px; }
+	    	70% { opacity: 0.6; margin: 220px 0 0 35px; height: 200px; width: 300px;
+	    		background: url('../imgs/Logomark_aqua.png') no-repeat; background-size: contain; }
+			100% { opacity: 0.6; margin: 220px 0 0 35px; height: 200px; width: 300px;
+				background: url('../imgs/Logomark.png') no-repeat; background-size: contain; }
+	    });
+	    .animation(aqua_move 2.6s ease);
+	    animation-fill-mode: forwards;
+	    -webkit-animation-delay: 0.3s;
+	    animation-delay: 0.3s;
+	}
+	.pink_move_anim {
+		.keyframes(pink_move; {
+			0% { opacity: 0; margin: 280px 0 0 280px; height: 200px; width: 300px; }
+	    	70% { opacity: 0.6; margin: 220px 0 0 35px; height: 200px; width: 300px;
+	    		background: url('../imgs/Logomark_pink.png') no-repeat; background-size: contain; }
+			100% { opacity: 0.6; margin: 220px 0 0 35px; height: 200px; width: 300px;
+				background: url('../imgs/Logomark.png') no-repeat; background-size: contain; }
+	    });
+	    .animation(pink_move 1.9s ease);
+	    animation-fill-mode: forwards;
+	    -webkit-animation-delay: 0.45s;
+	    animation-delay: 0.45s;
+	}
+
+	.content_contain {
+		width: 300px;
+		height: 200px;
+		.absolute_pos(0, 0, 0, 0);
+		margin: auto;
+	}
+
+	.home_logo {
+		opacity: 0.08;
+		height: 200px;
+		width: 300px;
+		background: url('../imgs/Logomark.png') no-repeat;
+		background-size: contain;
+		position: absolute;
+	}
+
+}
