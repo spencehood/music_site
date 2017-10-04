@@ -1,3 +1,4 @@
+/* Background pattern from Subtle Patterns */
 @import url('https://fonts.googleapis.com/css?family=Roboto|Ovo|Quattrocento+Sans');
 .fade_in_anim {
   -webkit-animation: fade_in 0.6s linear;
@@ -83,20 +84,65 @@
     position: absolute;
   }
 }
-.now_playing {
-  position: absolute;
-  top: 15px;
+.play_btn_mini {
+  width: 50px;
+  height: 50px;
+  position: fixed;
   left: 15px;
+  top: 15px;
+  opacity: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.15s linear;
+}
+.play_btn_mini:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.play_btn_mini .play_triangle_mini {
+  border-width: 10px 0 10px 17px;
+  top: 15px;
+  left: 19px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  transition: 0.15s linear;
+  opacity: 1;
+}
+.play_btn_mini .pause_bars_mini {
+  width: 8px;
+  height: 22px;
+  border-left: 7px solid #fff;
+  border-right: 7px solid #fff;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: 0.15s linear;
+  opacity: 0;
+}
+.now_playing {
+  position: fixed;
+  top: 18px;
+  left: 80px;
   color: #777;
+  z-index: 100;
   border: 2px solid #e6e6e6;
+  background: #fff;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   opacity: 0;
-  transition: 0.35s linear;
+  transition: 0.15s linear;
 }
-.now_playing em {
-  color: #333;
+.now_playing .song_title {
+  color: #2caeec;
+  text-decoration: none;
+}
+.now_playing .song_title:hover {
+  text-decoration: underline;
 }
 .entry_screen {
   width: 100%;
@@ -150,6 +196,13 @@
   bottom: 0;
   left: 0;
   margin: auto;
+}
+.home_body {
+  overflow-x: hidden;
+}
+.home_content {
+  background: url('../imgs/wall4.png');
+  height: 100%;
 }
 .logo_yellow {
   background: url('../imgs/Logomark_yellow.png') no-repeat;
@@ -435,6 +488,7 @@
   width: 200px;
   height: 200px;
   opacity: 0;
+  z-index: 5;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
   position: absolute;
@@ -585,6 +639,27 @@
   left: 200px;
   margin: 0;
 }
+.play_bottom_bar {
+  position: fixed;
+  left: 0;
+  width: 40%;
+  height: 55px;
+  bottom: 0;
+  background: linear-gradient(90deg, #333, #43f1c2, rgba(0, 0, 0, 0));
+  opacity: 0.6;
+}
+.play_bottom_bar .play_section {
+  width: 600px;
+  height: 100%;
+  padding-top: 10px;
+}
+.play_bottom_bar .play_triangle {
+  border-width: 14px 0 14px 23px;
+  margin-top: 14px;
+  position: relative;
+  top: auto;
+  left: auto;
+}
 .home_nav {
   opacity: 0;
   position: fixed;
@@ -610,6 +685,82 @@
 .home_nav .nav_item.tunes_link:hover {
   color: #ff5bea;
 }
+.contact_form {
+  text-align: center;
+  margin: 0 auto;
+}
+.contact_form #myForm {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.contact_form input[type="text"],
+.contact_form textarea {
+  padding: 10px 10px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  font-size: 18px;
+  border: 2px solid #e6e6e6;
+}
+.contact_form #name,
+.contact_form #email {
+  width: 49%;
+}
+.contact_form #message {
+  width: 100%;
+  margin: 15px 0;
+}
+.contact_form #spam {
+  width: 100%;
+}
+.contact_form #submit {
+  width: 180px;
+  background: #43f1c2;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 8px;
+  border-radius: 50px;
+  border: 2px solid #43f1c2;
+  margin: 15px auto;
+  transition: 0.12s linear;
+  cursor: pointer;
+  color: #fff;
+}
+.contact_form #submit:hover {
+  background: #fff;
+  color: #333;
+}
+.contact_form .my_email {
+  margin: 0 auto;
+  font-size: 14px;
+}
+.contact_form .my_email .highlight {
+  color: #2caeec;
+}
+.contact_form .my_email .highlight:hover {
+  text-decoration: underline;
+}
+.contact_form .my_email a {
+  text-decoration: none;
+}
+.tunes_divider {
+  margin: 150px 0 90px;
+  background: #ff5bea;
+  height: 7px;
+  width: 105%;
+  opacity: 0.4;
+  transform: rotate(3deg);
+}
+.tunes_divider .divider_circle {
+  width: 90%;
+  height: 25px;
+  border: 3px solid #fff24a;
+  border-radius: 50%;
+  transform: rotate(-4deg);
+  margin-left: 5%;
+}
 .welcome {
   position: absolute;
   bottom: 18%;
@@ -622,6 +773,12 @@
   margin-left: -98px;
   transition: 0.17s linear;
   opacity: 0;
+  z-index: 5;
+}
+.welcome .enter_site_underline {
+  height: 3px;
+  background: #43f1c2;
+  transition: 0.17s linear;
 }
 .welcome .caret {
   font-size: 18px;
@@ -651,8 +808,8 @@
   transform: rotate(-40deg);
   right: 0;
 }
-.welcome:hover {
-  text-shadow: -20px -27px 0px #ff5bea, 20px 29px 0px #43f1c2;
+.welcome:hover > .enter_site_underline {
+  background: #ff5bea;
 }
 @media (max-width: 500px) {
   .entry_logo {

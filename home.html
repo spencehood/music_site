@@ -10,53 +10,173 @@
 	</head>
 	<body class="home_body">
 
-		<div class="now_playing">Now playing: <em>Ransom</em></div>
+		<div class="play_btn_mini">
+			<div class="play_triangle_mini"></div>
+			<div class="pause_bars_mini"></div>
+		</div>
+		<div class="now_playing">Now playing: <a href="https://soundcloud.com/user-975691885/ransom-proof-of-concept" target="blank" class="song_title">Ransom</a></div>
 
-		<div class="content_contain">
-
+		<div class="home_content">
 			
+			<div class="content_contain" id="home_content">
 
-			<div class="entry_screen">
-				<div class="entry_logo logo_yellow"></div>
-				<div class="entry_logo logo_aqua"></div>
-				<div class="entry_logo logo_pink"></div>
+				<div class="entry_screen">
+					<div class="entry_logo logo_yellow"></div>
+					<div class="entry_logo logo_aqua"></div>
+					<div class="entry_logo logo_pink"></div>
+
+					<!-- <div class="bar bar1"></div> -->
+				</div>
+				
+				<div class="home_logo"></div>
+				
+				<div class="play_btn_orbit_circle circle1"></div>
+				<div class="play_btn_orbit_circle circle2"></div>
+				<div class="play_btn_orbit_circle circle3"></div>
+				
+				<div class="play_btn">
+					<div class="play_triangle"></div>
+					<div class="pause_bars"></div>
+				</div>
+
+				<audio class="main_audio_player" controls="controls">
+					<source src="audio/RansomFinalV2.mp3" type="audio/mp3" />
+					Shoot, your browser doesn't support this audio player - check out my <a href="https://soundcloud.com/user-975691885" target="blank">Soundcloud</a> instead
+				</audio>
+
 			</div>
-			
-			<div class="home_logo"></div>
-			
-			<div class="play_btn_orbit_circle circle1"></div>
-			<div class="play_btn_orbit_circle circle2"></div>
-			<div class="play_btn_orbit_circle circle3"></div>
-			
-			<div class="play_btn">
-				<div class="play_triangle"></div>
-				<div class="pause_bars"></div>
-			</div>
+			<!-- <div class="bar bar2"></div> -->
 
-			<audio class="main_audio_player" controls="controls">
-				<source src="audio/RansomFinalV2.mp3" type="audio/mp3" />
-				Shoot, your browser doesn't support this audio player - check out my <a href="https://soundcloud.com/user-975691885" target="blank">Soundcloud</a> instead
-			</audio>
-
-<!-- 			<nav class="home_nav">
-				<a href="about.html"><div class="nav_item about_link">About</div></a>
-				<a href="tunes.html"><div class="nav_item tunes_link">Tunes</div></a>
-			</nav> -->
+			<a href="#" id="enter_link">
+				<div class="welcome">
+				Enter site
+				<div class="enter_site_underline"></div> 
+				<!-- <div class="caret">&#9660;</div> -->
+					
+						<!-- <div class="scroll_indicator">
+							<div class="bar bar1"></div>
+							<div class="bar bar2"></div>
+						</div> -->
+					
+				</div>
+			</a>
 
 		</div>
 
-		<a href="about.html" id="enter_link">
-			<div class="welcome">
-			Enter site 
-			<!-- <div class="caret">&#9660;</div> -->
-				
-					<!-- <div class="scroll_indicator">
-						<div class="bar bar1"></div>
-						<div class="bar bar2"></div>
-					</div> -->
-				
+		<div id="about_content">
+			
+			<nav class="non_home_nav">
+				<a href="#tunes"><div class="nav_item about_link">
+					<div class="bg_circle1 bg_circle"></div>
+					Tunes
+				</div></a>
+				<a href="" id="home_link"><div class="nav_item main_logo"></div></a>
+				<a href="#contact"><div class="nav_item tunes_link">
+					<div class="bg_circle bg_circle2"></div>
+					Contact
+				</div></a>
+
+			</nav>
+
+			<header>
+				<div class="text">
+					<h1>The pleasure's all mine.</h1>
+					<p>Spence is the name, tunes are the game. Born and raised in the amber sunshine of Denver, Colorado, I've made my way out to Palo Alto where I've been spreading good vibes up and down the Bay. Check out my Instagram, <a href="https://www.instagram.com/spencetunes/?hl=en" target="blank" class="insta_link"><span class="insta_link_highlight">@spencetunes</span></a>, for daily tunes, and scroll down for a peek.</p>
+				</div>
+				<div class="portrait pfull"></div>
+			</header>
+
+			<div class="tunes_divider">
+				<div class="divider_circle"></div>
 			</div>
-		</a>
+
+			<section id="tunes">
+				
+				<div class="vid">
+					<iframe class="frame1" src="" frameborder="0" allowfullscreen></iframe>
+					<div class="bg_box"></div>
+				</div>
+				
+				<div class="vid">
+					<iframe class="frame2" src="" frameborder="0" allowfullscreen></iframe>
+					<div class="bg_box box2"></div>
+				</div>
+
+				<div class="vid">
+					<iframe class="frame3" src="" frameborder="0" allowfullscreen></iframe>
+					<div class="bg_box box3"></div>
+				</div>
+
+				<div class="see_more">
+					Wanna see more?<br/>Check out my <br/><a href="https://www.youtube.com/channel/UCQ800V4ImdGgG25tgkrI0vA" target="blank">
+						<div class="youtube_link_highlight">YouTube channel</div>
+					</a>
+				</div>
+
+			</section>
+
+			<section class="clips">
+
+				<div class="audio_tile">
+					<strong>Something Sweet</strong> - music and lyrics by David Bashford, solo by Spence
+					<audio controls="controls">
+						<source src="audio/SomethingSweet.wav" type="audio/wav" />
+						Shoot, your browser doesn't support this audio player - check out my SOUNDCLOUD instead
+					</audio>
+				</div>
+				
+				<div class="audio_tile tile2">
+					<strong>December, 1963</strong> - CU Buffoons A Cappella cover <span class="lighter_text">(The Four Seasons)</span>, solo by Spence
+					<audio controls="controls">
+						<source src="audio/December1963.wav" type="audio/wav" />
+						Shoot, your browser doesn't support this audio player - check out my SOUNDCLOUD instead
+					</audio>
+				</div>
+
+			</section>
+
+			<div class="bg_bar bar1"></div>
+			<div class="bg_bar bar2"></div>
+
+			<section id="contact">
+				
+				<div class="contact_bg_circle"></div>
+				<div class="contact_bg_circle bg_circle2"></div>
+
+				<h1>Representatives are standing by.</h1>
+				<p>And by "representatives", I mean little old me, eagerly refreshing my inbox every five seconds.  I would be delighted to answer any questions you have, send you some more tunes, debate cookie butter vs Nutella; you name it.</p>
+				<div class="hire_line">
+					I am also <span class="hire_highlight">happily available for hire</span> at private and public events.
+				</div>
+			
+				<p class="mobile_text">Drop me a line at
+				<a href="mailto:spencehoodnow@gmail.com?Subject=New%20Music%20message%20from%20spencenow.com%20-%20" target="_top" class="inline_link_email">
+					spencehoodnow@gmail.com
+				</a>, and check out some of my stamps on the internet below. I am happily available for hire at private and public events. 
+				</p>
+
+				<div class="contact_form">
+					<form id="myform" name="contactus" action="contact.php" method="post">
+						<input type="text" id="name" name="name" placeholder="Name" maxlength="30" />
+						<input type="text" id="email" name="email" placeholder="Email address" maxlength="30" />
+						<textarea id="message" name="message" placeholder="Message" rows="5"></textarea>
+						<input type="text" id="spam" name="spam" placeholder="Please leave this field blank." maxlength="9" />
+						<input type="submit" id="submit" name="submit" value="Send that puppy" />
+					</form>
+					<div class="my_email">You can also send an email to <a href="mailto:spencehoodnow@gmail.com?Subject=From%20Music%20Site%20-%20" target="_top"><span class="highlight">spencehoodnow@gmail.com</span></a></div>
+				</div>
+
+				<div class="social">
+					<a href="https://www.facebook.com/spencehood/" target="blank"><div class="social_icon fb"></div></a>
+					<a href="https://www.youtube.com/channel/UCQ800V4ImdGgG25tgkrI0vA" target="blank"><div class="social_icon youtube"></div></a>
+					<a href="https://soundcloud.com/user-975691885" target="blank"><div class="social_icon soundcloud"></div></a>
+					<a href="https://www.instagram.com/spencetunes/?hl=en" target="blank"><div class="social_icon ig"></div></a>
+				</div>
+		
+			</section>
+
+		</div>
+
 
 	</body>
 </html>
