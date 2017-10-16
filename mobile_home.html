@@ -6,6 +6,7 @@
 		<!-- <link rel="stylesheet" href="styles/main.css"> -->
 		<link rel="stylesheet" href="styles/mobile.css">
 		<link rel="icon" href="imgs/favicon.ico">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src=""></script>
 		<script src="mobile.js"></script>
@@ -13,6 +14,19 @@
 	<body>
 
 		<!-- <div class="now_playing">Now playing: <a href="https://soundcloud.com/user-975691885/ransom-proof-of-concept" target="blank" class="song_title">Ransom</a></div> -->
+
+		<audio class="main_audio_player" controls="controls">
+			<source src="audio/RansomFinalV2.mp3" type="audio/mp3" />
+			Shoot, your browser doesn't support this audio player - check out my <a href="https://soundcloud.com/user-975691885" target="blank">Soundcloud</a> instead
+		</audio>
+		<audio class="audio_player1" controls="controls">
+			<source src="audio/SomethingSweet.wav" type="audio/wav" />
+			Shoot, your browser doesn't support this audio player - check out my <a href="https://soundcloud.com/user-975691885" target="blank">Soundcloud</a> instead
+		</audio>
+		<audio class="audio_player2" controls="controls">
+			<source src="audio/December1963.wav" type="audio/wav" />
+			Shoot, your browser doesn't support this audio player - check out my <a href="https://soundcloud.com/user-975691885" target="blank">Soundcloud</a> instead
+		</audio>
 
 		<div class="home_content">
 			
@@ -59,21 +73,32 @@
 
 		</div>
 
+		<div class="me_screen"></div>
 		<div class="me_page">
+
 			<div style="position: relative;">
 				<div class="close close_me">
-					<div class="close_icon"></div>
+					<div class="close_icon">
+						<div class="bar bar1"></div>
+						<div class="bar bar2"></div>
+					</div>
 				</div>
 				<!-- <div class="me_border"></div> -->
-				<div class="portrait"></div>
+				
 				<h1 class="pleasure">The pleasure's all mine.</h1>
-				<p class="me_text">Spence is the name, good vibes are the game. Check out my Instagram <a href="https://www.instagram.com/spencetunes/?hl=en" target="blank" class="insta_link"><span class="insta_link_highlight">@spencetunes</span></a> for daily tunes, and let's stay in touch DOWN ARROW HERE.</p>
+				<div class="portrait"></div>
+				<p class="me_text">Spence is the name, tunes are the game. Born and raised in Denver, CO, I've made my way out to Palo Alto to spread good vibes up and down the bay. Check out my Instagram <a href="https://www.instagram.com/spencetunes/?hl=en" target="blank" class="insta_link"><span class="insta_link_highlight">@spencetunes</span></a> for daily tunes, and let's stay in touch.</p>
 				<div class="contact_section">
-					<p>If you wanna stay posted on shows, gifts, and other tremendous things, toss a guy your email address below</p>
-					<form action="submit" class="newsletter">
-						<input type="text" id="email" />
-						<button type="submit" id="submitBtn">Submit</button>						
+					<p>Toss your email address in the field below if you want to keep seeing the cool stuff I'm working on (and if you like recieving gifts).</p>
+					<form action="submit" class="newsletter" id="emailSubmit" name="emailSubmit" action="email_submit.php" method="post">
+						<input type="text" id="email" placeholder="Email address"/>
+						<button type="submit" id="submit" name="submit">Submit</button>						
 					</form>
+				</div>
+				<div class="me_footer">
+					<p class="closing_text">
+						You can also reach me at <a href="mailto:spencehoodnow@gmail.com?Subject=From%20spencetunes.com%20-%20" target="_top"><strong>spencehoodnow<wbr>@gmail.com</strong></a>. I am happily available for all of your musical needs.<i class="em em-thumbsup"></i>
+					</p>
 					<div class="social">
 						<div class="social_icon ig"></div>
 						<div class="social_icon youtube"></div>
@@ -81,24 +106,68 @@
 					</div>
 				</div>
 			</div>
+			<div class="me_bottom_bar"></div>
 		</div>
 
+		<div class="tunes_screen"></div>
 		<div class="tunes_page">
-			<div class="close close_tunes"></div>
-			<div class="vid">
-				<iframe class="frame1" src="https://www.youtube.com/embed/cfrdyISpVRc" frameborder="0" allowfullscreen></iframe>
-				<!-- <div class="bg_box"></div> -->
+			<div class="close close_tunes">
+				<div class="close_icon">
+					<div class="bar bar1"></div>
+					<div class="bar bar2"></div>
+				</div>
 			</div>
-			
-			<div class="vid">
-				<iframe class="frame2" src="https://www.youtube.com/embed/Qg-7NgxHnBA" frameborder="0" allowfullscreen></iframe>
-				<!-- <div class="bg_box box2"></div> -->
+			<div class="videos">
+				<div class="vid">
+					<div class="bg_box box1"></div>
+					<iframe class="frame1" src="" frameborder="0" allowfullscreen></iframe>
+					<!-- <div class="bg_box"></div> -->
+				</div>
+				
+				<div class="vid">
+					<div class="bg_box box2"></div>
+					<iframe class="frame2" src="" frameborder="0" allowfullscreen></iframe>
+					<!-- <div class="bg_box box2"></div> -->
+				</div>
+
+				<div class="vid">
+					<div class="bg_box box3"></div>
+					<iframe class="frame3" src="" frameborder="0" allowfullscreen></iframe>
+					<!-- <div class="bg_box box3"></div> -->
+				</div>
 			</div>
 
-			<div class="vid">
-				<iframe class="frame3" src="https://www.youtube.com/embed/Svo1GhJ9_M0" frameborder="0" allowfullscreen></iframe>
-				<!-- <div class="bg_box box3"></div> -->
+			<div class="audio_clips">
+
+				
+				<div class="audio_tile tile1">
+					<div class="audio_desc">
+						<span class="title">Something Sweet</span><p>Music &amp; lyrics by David Bashford</p><p>Solo by Spence</p>
+					</div>
+				</div>
+				<div class="audio_play_btn btn1">
+					<div class="audio_play_triangle"></div>
+					<div class="audio_play_bars"></div>
+				</div>
+
+
+				<div class="audio_play_btn btn2">
+					<div class="audio_play_triangle"></div>
+					<div class="audio_play_bars"></div>
+				</div>
+				<div class="audio_tile tile2">
+					<div class="audio_desc">
+						<span class="title">December, 1963</span><p>Song by The Four Season</p><p>CU Buffoons A Capella</p><p>Solo by Spence</p>
+					</div>
+				</div>
 			</div>
+
+			<div class="tunes_footer">
+				<p><span class="title">Debut EP coming early 2018</span>ya heard it here first folks <i class="em em-metal"></i></p>
+				
+			</div>
+			<div class="tunes_bottom_bar"></div>
+			
 		</div>
 
 	</body>
