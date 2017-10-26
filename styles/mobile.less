@@ -3,6 +3,7 @@
 @off_black: #333;
 @yellow: #fff24a;
 @aqua: #43f1c2;
+@pink2: #ff86ad;
 @pink: #ff5bea;
 
 .absolute_pos(@top, @right, @bottom, @left) {
@@ -36,8 +37,11 @@
 * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 body {
 	background: url('../imgs/wall4.png');
-	overflow-x: hidden;
 	color: @off_black;
+	// Fixes bug in mobile Safari where font-weight: bold was being ignored
+	-webkit-font-smoothing: subpixel-antialiased;
+	// overflow-x: hidden;
+	// overflow-y: hidden;
 }
 .em {
 	height: 1.3em !important;
@@ -48,28 +52,83 @@ body {
     	margin-left: 0;
     }
 }
+
+#landing_screen	{
+	width: 100%;
+	height: 100%;
+	background: url('../imgs/wall4.png');
+	z-index: 100;
+	transition: 1s linear;
+	.loading_area {
+		width: 100px;
+		height: 100px;
+		.absolute_pos(0, 0, 0, 0);
+		margin: auto;
+	}
+	.landing_circle {
+		width: 100px;
+		height: 100px;
+    	background: @aqua;
+    	border-radius: 50%;
+    	.absolute_pos(0, auto, auto, auto);
+    	z-index: 101;
+    	.keyframes(circle_fly; {
+			0% { height: 100px; top: 0; -webkit-transform: rotate(0deg); background: @aqua; }
+	    	25%   { height: 0px; top: 50px; -webkit-transform: rotate(-90deg); background: @aqua; }
+	    	26%   { height: 0px; top: 50px; -webkit-transform: rotate(-90deg); background: @pink2; }
+	    	50%   { height: 100px; top: 0; -webkit-transform: rotate(-180deg); background: @pink2; }
+	    	75%   { height: 0; top: 50px; -webkit-transform: rotate(-270deg); background: @pink2; }
+	    	76%   { height: 0; top: 50px; -webkit-transform: rotate(-270deg); background: @yellow; }
+	    	// 99%   { height: 100px; top: 0; -webkit-transform: rotate(-360deg); filter: blur(0px); -webkit-filter: blur(0px) background: @yellow; }
+	    	100%   { height: 100px; top: 0; -webkit-transform: rotate(-360deg); background: @yellow; }
+	    });
+	    .animation(circle_fly 5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite);
+	    animation-direction: alternate;
+	    -webkit-animation-direction: alternate;
+	}
+	.logo {
+		background: url('../imgs/s_logo_small.png') no-repeat;
+		background-size: contain;
+		position: relative;
+		// .absolute_pos(auto, auto, auto, auto);
+		width: 60px;
+		height: 60px;
+		margin: 20px;
+		z-index: 102;
+	}
+}
+#non_landing {
+	// display: none;
+	z-index: 99;
+
+}
+
 .upper_section {
 	.absolute_pos(0, 0, auto, 0);
 	margin: auto;
 	height: 30%;
+	opacity: 0;
 	transition: 0.3s linear;
 }
 .mid_section {
 	.absolute_pos(0, 0, 0, 0);
 	margin: auto;
 	height: 40%;
+	opacity: 0;
 	transition: 0.3s linear;
 }
 .lower_section {
 	.absolute_pos(auto, 0, 0, 0);
 	margin: auto;
 	height: 30%;
+	opacity: 0;
 	transition: 0.3s linear;
 }
 .page_link {
 	font-family: "Ovo", serif;
     font-size: 55px;
     font-weight: 600;
+    cursor: pointer;
     position: relative;
     text-align: center;
     top: 50%;
@@ -245,6 +304,15 @@ audio {
 			}
 		}
 	}
+	&.close_tunes {
+		.bar {
+			.absolute_pos(59px, auto, auto, 60px);
+			transform: rotate(-50deg);
+			&.bar2 {
+				transform: rotate(50deg);
+			}
+		}
+	}
 }
 .close_bounce_anim {
 	.keyframes(close_bounce; {
@@ -285,7 +353,8 @@ h1.pleasure {
     }
     .insta_link_highlight {
     	background: url('../imgs/highlight_yellow.png') no-repeat;
-    	background-size: 100% 100%; 
+    	background-size: 100% 100%;
+    	opacity: 0.9;
     }
 }
 .contact_section {
@@ -319,6 +388,10 @@ h1.pleasure {
 		margin-top: 20px;
 		border-radius: 100px;
 		border: none;
+		transition: 0.12s linear;
+		&:focus {
+			outline: none;
+		}
 	}
 }
 .me_footer {
@@ -472,11 +545,12 @@ iframe {
 	    height: 38px;
 	    border-left: 12px solid @off_black;
 	    border-right: 12px solid @off_black;
-	    position: absolute;
-	    top: 21px;
-	    left: 22px;
+	    .absolute_pos(21px, auto, auto, 22px);
 	    transition: 0.15s linear;
 	    opacity: 0;
+	    &.apb1 {
+	    	top: 10px;
+	    }
     }
 	.audio_tile {
 		// width: 90%;

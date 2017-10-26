@@ -1,5 +1,27 @@
 $(document).ready(function() {
 
+
+
+	window.addEventListener ? 
+	window.addEventListener('load', whenPageLoads, false) : 
+	window.attachEvent && window.attachEvent('onload', whenPageLoads);
+	function whenPageLoads() {
+		
+		setTimeout(function() {
+			$('#landing_screen').css({'opacity': '0', 'visibility': 'hidden'});
+		}, 2000);
+		setTimeout(function() {
+			$('.upper_section').css({'opacity': '1'});
+		}, 2800);
+		setTimeout(function() {
+			$('.lower_section').css({'opacity': '1'});
+		}, 3000);
+		setTimeout(function() {
+			$('.mid_section').css({'opacity': '1'});
+		}, 3200);
+	}
+
+
 	window.scrollTo(0, 0);
 
 	var vidSource1 = 'https://www.youtube.com/embed/cfrdyISpVRc';
@@ -14,6 +36,7 @@ $(document).ready(function() {
 	
 	function meSlide() {
 		window.scrollTo(0, 0);
+		$('body').css('overflow-y', 'visible');
 		$('.upper_section').css({'opacity': '0'});
 		setTimeout(function() {
 			$('.mid_section').css({'opacity': '0'});
@@ -37,6 +60,7 @@ $(document).ready(function() {
 
 	function tunesSlide() {
 		window.scrollTo(0, 0);
+		$('body').css('overflow-y', 'visible');
 		$('.upper_section').css({'opacity': '0'});
 		setTimeout(function() {
 			$('.mid_section').css({'opacity': '0'});
@@ -58,7 +82,7 @@ $(document).ready(function() {
 					$('.frame3').attr('src', vidSource3);
 					iframesLoaded = true;
 				}
-			}, 600);
+			}, 800);
 			setTimeout(function() {
 				$('.close_icon').css('opacity', '1');
 			}, 1100);
@@ -69,7 +93,7 @@ $(document).ready(function() {
 	function closeMePage() {
 		// $('.me_page').css('transform', 'translateX(-100%)');
 		// $('.close_me').removeClass('close_bounce_anim');
-
+		$('body').css('overflow-y', 'hidden');
 		$('.me_page').css('transform', 'translateX(-103%)');
 		setTimeout(function() {
 			$('.me_screen').css('left', '-103%');
@@ -84,6 +108,7 @@ $(document).ready(function() {
 	}
 
 	function closeTunesPage() {
+		$('body').css('overflow-y', 'visible');
 		$('.tunes_page').css('transform', 'translateX(103%)');
 		setTimeout(function() {
 			$('.tunes_screen').css('right', '-103%');
@@ -119,6 +144,8 @@ $(document).ready(function() {
 		var allAudios = document.getElementsByTagName('audio');
 		for (var i = 0; i < allAudios.length; i++) {
 			allAudios[i].pause();
+			oneIsPlaying = false;
+			twoIsPlaying = false;
 		}
 		if (mainIsPlaying == false) {
 	        mainAudio[0].play();
@@ -140,12 +167,23 @@ $(document).ready(function() {
 		var allAudios = document.getElementsByTagName('audio');
 		for (var i = 0; i < allAudios.length; i++) {
 			allAudios[i].pause();
+			mainIsPlaying = false;
+			twoIsPlaying = false;
 		}
 		if (oneIsPlaying == false) {
 	        mainAudio[0].play();
+	        $('.apb1').css('opacity', '1');
+	        $('.apt1').css('opacity', '0');
+	        $('.apt2').css('opacity', '1');
+	        $('.apb2').css('opacity', '0');
+	        $('.pause_bars').css('opacity', '0');
+			$('.play_triangle').css('opacity', '1');
+			$('.play_btn_orbit_circle').css('opacity', '0');
 	        oneIsPlaying = true;
 	    } else {
 	        mainAudio[0].pause();
+	        $('.apt1').css('opacity', '1');
+	        $('.apb1').css('opacity', '0');
 	        oneIsPlaying = false;
 	    }
 	}
@@ -155,12 +193,23 @@ $(document).ready(function() {
 		var allAudios = document.getElementsByTagName('audio');
 		for (var i = 0; i < allAudios.length; i++) {
 			allAudios[i].pause();
+			mainIsPlaying = false;
+			oneIsPlaying = false;
 		}
 		if (twoIsPlaying == false) {
 	        mainAudio[0].play();
+	        $('.apb2').css('opacity', '1');
+	        $('.apt2').css('opacity', '0');
+	        $('.apt1').css('opacity', '1');
+	        $('.apb1').css('opacity', '0');
+	        $('.pause_bars').css('opacity', '0');
+			$('.play_triangle').css('opacity', '1');
+			$('.play_btn_orbit_circle').css('opacity', '0');
 	        twoIsPlaying = true;
 	    } else {
 	        mainAudio[0].pause();
+	        $('.apt2').css('opacity', '1');
+	        $('.apb2').css('opacity', '0');
 	        twoIsPlaying = false;
 	    }
 	}
@@ -180,49 +229,6 @@ $(document).ready(function() {
 	//         isPlaying = false;
 	//     }
 	// }
-
-	function playAudio(audio_obj) {
-		
-	}
-
-	function pauseAudio(audio_obj) {
-		audio_obj[0].pause;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	$("#emailSubmit").submit(function() {
-        // Checking to make sure none of the fields were left blank (except spam field)
-        // TODO also add some spam validating AND email address validating
-        if ($('#email').val() != '' && $('#email').val().indexOf("@") >= 0 && $('#email').val().indexOf(".") >= 0) {
-            // Doing all the things specified in contact-mail.php, just staying on the same page
-            $.post('email_submit.php', {
-                email: $('#email').val(),
-                submit: 'yes'},
-                function(data) {
-                    // alert('working');
-                    $('#email').val(''); /* Clear the inputs */
-                }, 'text');
-            $('#submit').innerHTML('Heck yeah');
-            // $('#submit').css('background', 'rgb(76, 216, 90)');
-            return false;
-        } else {
-            // Display the warning telling the user not to leave any fields blank
-            alert('Please provide a valid email address.');
-            return false;
-        }
-    });
 
 
 });

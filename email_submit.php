@@ -5,7 +5,7 @@
         
         $email = $_POST["email"];
 
-        mail('spencehoodnow@gmail.com', 'New fan email address! 
+        mail('spencehoodnow@gmail.com', 'New fan email address!', ' 
 
         ' .  
         'Email address: ' . $email);
